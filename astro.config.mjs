@@ -29,4 +29,7 @@ export default defineConfig({
     solidJs({ devtools: true }),
     mdx(),
   ],
+  legacy: {
+    collections: true,
+  },
 });

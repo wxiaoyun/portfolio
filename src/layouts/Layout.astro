@@ -5,7 +5,7 @@ import Header from "@/components/Header.astro";
 import { Separator } from "@/components/ui/separator";
 import "@/index.css";
 import { AstroFont } from "astro-font";
-import { fade, ViewTransitions } from "astro:transitions";
+import { ClientRouter, fade } from "astro:transitions";
 import favicon from "../assets/favicon.ico";
 
 export type LayoutProps = {
@@ -37,7 +37,7 @@ const { title = "Wu Xiaoyun" } = Astro.props as LayoutProps;
         },
       ]}
     />
-    <ViewTransitions />
+    <ClientRouter />
     <GoogleAnalytics />
   </head>
   <body class="antialiased bg-gray-50">

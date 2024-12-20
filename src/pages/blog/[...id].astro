@@ -4,12 +4,12 @@ import MediumArticle from "@/components/MediumArticle.astro";
 import { Separator } from "@/components/ui/separator";
 import { getSortedBlogEntries } from "@/content/util";
 import Layout from "@/layouts/Layout.astro";
-import type { CollectionEntry } from "astro:content";
+import { type CollectionEntry, render } from "astro:content";
 
 export async function getStaticPaths() {
   const blogEntries = await getSortedBlogEntries();
   return blogEntries.map((entry, i) => ({
-    params: { slug: entry.slug },
+    params: { id: entry.id },
     props: {
       entry,
       index: i,
@@ -27,7 +27,7 @@ const item = entry.data;
 const blogEntries = await getSortedBlogEntries();
 
 // Randomly select 3 other blog entries to show
-const otherEntries = blogEntries.filter((b) => b.slug !== entry.slug);
+const otherEntries = blogEntries.filter((b) => b.id !== entry.id);
 otherEntries.sort(() => Math.random() - 0.5);
 otherEntries.splice(3);
 
@@ -37,7 +37,7 @@ const pubDate = new Date(item.pubDate).toLocaleDateString("en-US", {
   day: "numeric",
 });
 
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 ---
 
 <Layout title={item.title}>
@@ -49,7 +49,7 @@ const { Content } = await entry.render();
   </time>
 
   <article class="prose-slate prose sm:prose-lg w-full">
-    <h1 transition:name={`blog-${entry.slug}-top`}>{item.title}</h1>
+    <h1 transition:name={`blog-${entry.id}-top`}>{item.title}</h1>
     <Content />
   </article>
 
