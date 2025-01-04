@@ -8,6 +8,6 @@ export const getSortedBlogEntries = async () => {
       pubDate: new Date(item.data.pubDate),
     },
   }));
-  blogEntries.sort((a, b) => b.data.pubDate - a.data.pubDate);
+  blogEntries.sort((a, b) => (a.data.pubDate < b.data.pubDate ? 1 : -1));
   return blogEntries;
 };
