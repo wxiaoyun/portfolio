@@ -20,7 +20,7 @@
     "@astrojs/tailwind": "^5.1.4",
     "@kobalte/core": "^0.13.7",
     "astro": "^5.1.2",
-    "astro-font": "^0.1.81",
+    "astro-font": "^1.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "embla-carousel-autoplay": "^8.3.1",
