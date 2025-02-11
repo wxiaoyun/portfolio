@@ -37,10 +37,10 @@ importers:
         version: 2.1.1
       embla-carousel-autoplay:
         specifier: ^8.3.1
-        version: 8.5.1(embla-carousel@8.5.1)
+        version: 8.5.2(embla-carousel@8.5.2)
       embla-carousel-solid:
         specifier: ^8.3.1
-        version: 8.5.1(solid-js@1.9.4)
+        version: 8.5.2(solid-js@1.9.4)
       rehype-autolink-headings:
         specifier: ^7.1.0
         version: 7.1.0
@@ -1787,23 +1787,23 @@ packages:
   electron-to-chromium@1.5.75:
     resolution: {integrity: sha512-Lf3++DumRE/QmweGjU+ZcKqQ+3bKkU/qjaKYhIJKEOhgIO9Xs6IiAQFkfFoj+RhgDk4LUeNsLo6plExHqSyu6Q==}
 
-  embla-carousel-autoplay@8.5.1:
-    resolution: {integrity: sha512-FnZklFpePfp8wbj177UwVaGFehgs+ASVcJvYLWTtHuYKURynCc3IdDn2qrn0E5Qpa3g9yeGwCS4p8QkrZmO8xg==}
+  embla-carousel-autoplay@8.5.2:
+    resolution: {integrity: sha512-27emJ0px3q/c0kCHCjwRrEbYcyYUPfGO3g5IBWF1i7714TTzE6L9P81V6PHLoSMAKJ1aHoT2e7YFOsuFKCbyag==}
     peerDependencies:
-      embla-carousel: 8.5.1
+      embla-carousel: 8.5.2
 
-  embla-carousel-reactive-utils@8.5.1:
-    resolution: {integrity: sha512-n7VSoGIiiDIc4MfXF3ZRTO59KDp820QDuyBDGlt5/65+lumPHxX2JLz0EZ23hZ4eg4vZGUXwMkYv02fw2JVo/A==}
+  embla-carousel-reactive-utils@8.5.2:
+    resolution: {integrity: sha512-QC8/hYSK/pEmqEdU1IO5O+XNc/Ptmmq7uCB44vKplgLKhB/l0+yvYx0+Cv0sF6Ena8Srld5vUErZkT+yTahtDg==}
     peerDependencies:
-      embla-carousel: 8.5.1
+      embla-carousel: 8.5.2
 
-  embla-carousel-solid@8.5.1:
-    resolution: {integrity: sha512-mVtItm+vPAAmDhbpCbeML6InTbuNY2dTwnEeECPxICxSCtpUxJV3xHn3A8cLoi6VQ6SjJVNhQ56WVvIzdxE4KQ==}
+  embla-carousel-solid@8.5.2:
+    resolution: {integrity: sha512-orn79DEIvpb//APyvCVxcxuD4nEBecIrZ6cMr0hamF1ytbvteWeAmbxq62nHQUZljUKmgY8PnDICBlOhzYJfnA==}
     peerDependencies:
       solid-js: ^1.0.0
 
-  embla-carousel@8.5.1:
-    resolution: {integrity: sha512-JUb5+FOHobSiWQ2EJNaueCNT/cQU9L6XWBbWmorWPQT9bkbk+fhsuLr8wWrzXKagO3oWszBO7MSx+GfaRk4E6A==}
+  embla-carousel@8.5.2:
+    resolution: {integrity: sha512-xQ9oVLrun/eCG/7ru3R+I5bJ7shsD8fFwLEY7yPe27/+fDHCNj0OT5EoG5ZbFyOxOcG6yTwW8oTz/dWyFnyGpg==}
 
   emmet@2.4.11:
     resolution: {integrity: sha512-23QPJB3moh/U9sT4rQzGgeyyGIrcM+GH5uVYg2C6wZIxAIJq7Ng3QLT79tl8FUwDXhyq9SusfknOrofAKqvgyQ==}
@@ -5350,21 +5350,21 @@ snapshots:
 
   electron-to-chromium@1.5.75: {}
 
-  embla-carousel-autoplay@8.5.1(embla-carousel@8.5.1):
+  embla-carousel-autoplay@8.5.2(embla-carousel@8.5.2):
     dependencies:
-      embla-carousel: 8.5.1
+      embla-carousel: 8.5.2
 
-  embla-carousel-reactive-utils@8.5.1(embla-carousel@8.5.1):
+  embla-carousel-reactive-utils@8.5.2(embla-carousel@8.5.2):
     dependencies:
-      embla-carousel: 8.5.1
+      embla-carousel: 8.5.2
 
-  embla-carousel-solid@8.5.1(solid-js@1.9.4):
+  embla-carousel-solid@8.5.2(solid-js@1.9.4):
     dependencies:
-      embla-carousel: 8.5.1
-      embla-carousel-reactive-utils: 8.5.1(embla-carousel@8.5.1)
+      embla-carousel: 8.5.2
+      embla-carousel-reactive-utils: 8.5.2(embla-carousel@8.5.2)
       solid-js: 1.9.4
 
-  embla-carousel@8.5.1: {}
+  embla-carousel@8.5.2: {}
 
   emmet@2.4.11:
     dependencies:
