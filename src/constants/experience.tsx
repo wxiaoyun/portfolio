@@ -5,7 +5,11 @@ import {
 } from "@/components/BentoGrid";
 import { getImage } from "astro:assets";
 import { BsPersonBadgeFill } from "solid-icons/bs";
-import { FaBrandsGithub, FaBrandsTiktok } from "solid-icons/fa";
+import {
+  FaBrandsGithub,
+  FaBrandsTiktok,
+  FaSolidMoneyBill,
+} from "solid-icons/fa";
 import { FiExternalLink } from "solid-icons/fi";
 import { ImLibrary } from "solid-icons/im";
 import rustScript from "../assets/RustScript.png";
@@ -25,6 +29,45 @@ const rspackSvg = await getImage({
 });
 
 export const projects: BentoGridItemProps[] = [
+  {
+    header: (
+      <FaSolidMoneyBill class="w-24 h-24 m-auto opacity-70 group-hover/bento:rotate-3 transition-all" />
+    ),
+    title: "Expense Tracker iOS App",
+    icon: (
+      <a
+        href="https://github.com/wxiaoyun/expense-tracker"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Github repository for Expense Tracker"
+      >
+        <FaBrandsGithub class="hover:opacity-65 transition-opacity" />
+      </a>
+    ),
+    description:
+      "A desktop and iOS expense tracking application built with Tauri and SolidJS. Features include transaction management, recurring payments, financial analytics with interactive charts, automated processing via clipboard commands, and local SQLite storage with backup/restore functionality.",
+    class: "bg-neutral-50 sm:col-span-2",
+  },
+  {
+    header: (
+      <BsPersonBadgeFill class="w-24 h-24 m-auto opacity-70 group-hover/bento:rotate-3 transition-all" />
+    ),
+    title: "Portfolio",
+    icon: (
+      <a
+        href="https://github.com/wxiaoyun/wxiaoyun.github.io"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Github repository for portfolio"
+      >
+        <FaBrandsGithub class="hover:opacity-65 transition-opacity" />
+      </a>
+    ),
+    description:
+      "The current portfolio you are viewing. A minimalist design with a focus on responsive UI.  Built with Astro, Solidjs and Shadcn UI.",
+    class: "bg-neutral-50",
+  },
+  BentoSkeleton,
   {
     header: (
       <img
@@ -52,26 +95,6 @@ export const projects: BentoGridItemProps[] = [
   },
   {
     header: (
-      <BsPersonBadgeFill class="w-24 h-24 m-auto opacity-70 group-hover/bento:rotate-3 transition-all" />
-    ),
-    title: "Portfolio",
-    icon: (
-      <a
-        href="https://github.com/wxiaoyun/wxiaoyun.github.io"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Github repository for portfolio"
-      >
-        <FaBrandsGithub class="hover:opacity-65 transition-opacity" />
-      </a>
-    ),
-    description:
-      "The current portfolio you are viewing. A minimalist design with a focus on responsive UI.  Built with Astro, Solidjs and Shadcn UI.",
-    class: "bg-neutral-50",
-  },
-  BentoSkeleton,
-  {
-    header: (
       <ImLibrary class="w-24 h-24 m-auto opacity-70 group-hover/bento:rotate-3 transition-all" />
     ),
     title: "Cambodia Community Library",
@@ -89,6 +112,7 @@ export const projects: BentoGridItemProps[] = [
       "Solo built a full stack Library Management System with role based access control for a village located at Cambodia. It is a two year school project aimed to improve literacy level in Ou Ruessei, a village located at Cambodia.",
     class: "bg-neutral-50 sm:col-span-2",
   },
+  BentoSkeleton,
 ];
 
 export const openSourceContrib: BentoGridItemProps[] = [
@@ -128,7 +152,37 @@ export const professionalExperiences: BentoGridItemProps[] = [
         class="m-auto opacity-70 group-hover/bento:rotate-3 transition-all rounded-md"
       />
     ),
-    title: "Software Engineer Intern @ ByteDance",
+    title: "Backend Software Engineer Intern @ ByteDance",
+    icon: (
+      <a
+        href="https://www.bytedance.com/en/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="ByteDance website"
+      >
+        <FiExternalLink />
+      </a>
+    ),
+    description: (
+      <ul class="list-inside list-disc">
+        <li>{"Currently taking place. Stay tuned!"}</li>
+      </ul>
+    ),
+    class: "bg-neutral-50 sm:col-span-2",
+    footer: (
+      <small class="text-xs text-muted-foreground">12/2024 - Present</small>
+    ),
+  },
+  BentoSkeleton,
+  BentoSkeleton,
+  {
+    header: (
+      <FaBrandsTiktok
+        size={72}
+        class="m-auto opacity-70 group-hover/bento:rotate-3 transition-all rounded-md"
+      />
+    ),
+    title: "Frontend Software Engineer Intern @ ByteDance",
     icon: (
       <a
         href="https://www.bytedance.com/en/"
@@ -158,8 +212,6 @@ export const professionalExperiences: BentoGridItemProps[] = [
       <small class="text-xs text-muted-foreground">05/2024 - 09/2024</small>
     ),
   },
-  BentoSkeleton,
-  BentoSkeleton,
   {
     header: (
       <img
@@ -186,4 +238,5 @@ export const professionalExperiences: BentoGridItemProps[] = [
       <small class="text-xs text-muted-foreground">05/2023 - 08/2023</small>
     ),
   },
+  BentoSkeleton,
 ];

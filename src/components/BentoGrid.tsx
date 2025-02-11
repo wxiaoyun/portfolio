@@ -36,9 +36,9 @@ export const BentoGridItem: Component<BentoGridItemProps> = (props) => {
     >
       {props.header}
       <div class="group-hover/bento:translate-x-2 transition duration-200">
-        {props.icon}
-        <div class="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
+        <div class="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2 flex items-center gap-2">
           {props.title}
+          {props.icon}
         </div>
         <div class="font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300">
           {props.description}
