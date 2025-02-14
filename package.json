@@ -17,7 +17,6 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/mdx": "^4.0.3",
     "@astrojs/solid-js": "^5.0.1",
-    "@astrojs/tailwind": "^6.0.0",
     "@kobalte/core": "^0.13.8",
     "@tailwindcss/vite": "^4.0.6",
     "astro": "^5.1.2",

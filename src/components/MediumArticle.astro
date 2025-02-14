@@ -39,7 +39,7 @@ const pubDate = new Date(item.pubDate).toLocaleDateString("en-US", {
     <ul class="flex gap-1">
       {
         item.categories.map((category: string) => (
-          <li class="text-xs text-muted-foreground bg-secondary px-2 py-1 rounded-s-full rounded-e-full text-nowrap shadow-sm">
+          <li class="text-xs text-muted-foreground bg-secondary px-2 py-1 rounded-s-full rounded-e-full text-nowrap shadow-xs">
             {category}
           </li>
         ))
