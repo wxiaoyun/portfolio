@@ -58,7 +58,7 @@ export const PaginationItem = <T extends ValidComponent = "button">(
           variant: "ghost",
           size: local.size,
         }),
-        "aria-[current=page]:border aria-[current=page]:border-input aria-[current=page]:bg-background aria-[current=page]:shadow-sm aria-[current=page]:hover:bg-accent aria-[current=page]:hover:text-accent-foreground",
+        "aria-[current=page]:border aria-[current=page]:border-input aria-[current=page]:bg-background aria-[current=page]:shadow-xs aria-[current=page]:hover:bg-accent aria-[current=page]:hover:text-accent-foreground",
         local.class,
       )}
       {...rest}
@@ -126,7 +126,7 @@ export const PaginationPrevious = <T extends ValidComponent = "button">(
           variant: "ghost",
           size: local.size,
         }),
-        "aria-[current=page]:border aria-[current=page]:border-input aria-[current=page]:bg-background aria-[current=page]:shadow-sm aria-[current=page]:hover:bg-accent aria-[current=page]:hover:text-accent-foreground",
+        "aria-[current=page]:border aria-[current=page]:border-input aria-[current=page]:bg-background aria-[current=page]:shadow-xs aria-[current=page]:hover:bg-accent aria-[current=page]:hover:text-accent-foreground",
         local.class,
       )}
       {...rest}
@@ -169,7 +169,7 @@ export const PaginationNext = <T extends ValidComponent = "button">(
           variant: "ghost",
           size: local.size,
         }),
-        "aria-[current=page]:border aria-[current=page]:border-input aria-[current=page]:bg-background aria-[current=page]:shadow-sm aria-[current=page]:hover:bg-accent aria-[current=page]:hover:text-accent-foreground",
+        "aria-[current=page]:border aria-[current=page]:border-input aria-[current=page]:bg-background aria-[current=page]:shadow-xs aria-[current=page]:hover:bg-accent aria-[current=page]:hover:text-accent-foreground",
         local.class,
       )}
       {...rest}
