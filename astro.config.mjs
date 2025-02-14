@@ -1,7 +1,7 @@
 // @ts-check
 import mdx from "@astrojs/mdx";
 import solidJs from "@astrojs/solid-js";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
@@ -22,11 +22,11 @@ export default defineConfig({
     remarkPlugins: [remarkToc],
     rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
   },
-  integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
-    solidJs({ devtools: true }),
-    mdx(),
-  ],
+  integrations: [solidJs({ devtools: true }), mdx()],
+  vite: {
+    plugins: [tailwindcss()],
+    css: {
+      transformer: "lightningcss",
+    },
+  },
 });
