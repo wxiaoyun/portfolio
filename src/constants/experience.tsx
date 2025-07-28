@@ -165,12 +165,21 @@ export const professionalExperiences: BentoGridItemProps[] = [
     ),
     description: (
       <ul class="list-inside list-disc">
-        <li>{"Currently taking place. Stay tuned!"}</li>
+        <li>
+          {
+            "Enhanced on-call efficiency with AI-driven Oncall Agent features, reducing incident analysis time for Wallet services."
+          }
+        </li>
+        <li>
+          {
+            "Optimized core RPC services by rewriting high-QPS handlers from Golang to Rust, achieving 50% resource savings and 30% latency reduction, projected to save $500K annually."
+          }
+        </li>
       </ul>
     ),
     class: "bg-neutral-50 sm:col-span-2",
     footer: (
-      <small class="text-xs text-muted-foreground">12/2024 - Present</small>
+      <small class="text-xs text-muted-foreground">12/2024 - 08/2025</small>
     ),
   },
   BentoSkeleton,
