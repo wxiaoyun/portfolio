@@ -13,7 +13,7 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.8.3)
       '@astrojs/mdx':
         specifier: ^4.1.0
-        version: 4.3.1(astro@5.12.4(@types/node@24.1.0)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.46.1)(typescript@5.8.3)(yaml@2.7.0))
+        version: 4.3.1(astro@5.12.5(@types/node@24.1.0)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.46.1)(typescript@5.8.3)(yaml@2.7.0))
       '@astrojs/solid-js':
         specifier: ^5.0.5
         version: 5.1.0(@types/node@24.1.0)(jiti@2.4.2)(lightningcss@1.30.1)(solid-devtools@0.34.3(solid-js@1.9.7)(vite@6.3.5(@types/node@24.1.0)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.7.0)))(solid-js@1.9.7)(yaml@2.7.0)
@@ -25,7 +25,7 @@ importers:
         version: 4.1.11(vite@6.3.5(@types/node@24.1.0)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.7.0))
       astro:
         specifier: ^5.4.2
-        version: 5.12.4(@types/node@24.1.0)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.46.1)(typescript@5.8.3)(yaml@2.7.0)
+        version: 5.12.5(@types/node@24.1.0)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.46.1)(typescript@5.8.3)(yaml@2.7.0)
       astro-font:
         specifier: ^1.0.0
         version: 1.1.0
@@ -290,9 +290,6 @@ packages:
 
   '@emmetio/stream-reader@2.2.0':
     resolution: {integrity: sha512-fXVXEyFA5Yv3M3n8sUGT7+fvecGrZP4k6FnWWMSZVQf69kAq0LLpaBQLGcPR30m3zMmKYhECP4k/ZkzvhEW5kw==}
-
-  '@emnapi/runtime@1.3.1':
-    resolution: {integrity: sha512-kEBmG8KyqtxJZv+ygbEim+KCGtIq1fC22Ms3S4ziXmYKm8uyoLX0MHONVKwp+9opg390VaKRNt4a7A9NwmpNhw==}
 
   '@emnapi/runtime@1.4.5':
     resolution: {integrity: sha512-++LApOtY0pEEz1zrd9vy1/zXVaVJJ/EbAF3u0fXIzPJEDtnITsBGbbK0EkM72amhl/R5b+5xx0Y/QhcVOpuulg==}
@@ -1373,8 +1370,8 @@ packages:
   astro-font@1.1.0:
     resolution: {integrity: sha512-hj1A0MkaJTeaArBpf1m9s4Nxu1Bn9h0QiEPeR9Dfjle25pT4CH4higzuadWzCRSvhGO2SzbM11YwZEF+cmLDxg==}
 
-  astro@5.12.4:
-    resolution: {integrity: sha512-ns+/KpfWToKvVf2DJTj4EIa4U59/XVBXeeq6VZUr5DXe6OZJFs8NfJi+W20nRm5nduIeBZGRzaoxPFq9lm4WEg==}
+  astro@5.12.5:
+    resolution: {integrity: sha512-cq+2h13F/aznM91bxXxKgqYj36gbXe6jC5kiUAXgWlh2nTyNtiCNMdDFpL2wIWSzac5+KzvRjKmxsYWbcmD4EQ==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2721,11 +2718,6 @@ packages:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
 
-  semver@7.6.3:
-    resolution: {integrity: sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==}
-    engines: {node: '>=10'}
-    hasBin: true
-
   semver@7.7.2:
     resolution: {integrity: sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==}
     engines: {node: '>=10'}
@@ -3435,12 +3427,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.1(astro@5.12.4(@types/node@24.1.0)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.46.1)(typescript@5.8.3)(yaml@2.7.0))':
+  '@astrojs/mdx@4.3.1(astro@5.12.5(@types/node@24.1.0)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.46.1)(typescript@5.8.3)(yaml@2.7.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.3
       '@mdx-js/mdx': 3.1.0(acorn@8.15.0)
       acorn: 8.15.0
-      astro: 5.12.4(@types/node@24.1.0)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.46.1)(typescript@5.8.3)(yaml@2.7.0)
+      astro: 5.12.5(@types/node@24.1.0)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.46.1)(typescript@5.8.3)(yaml@2.7.0)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -3647,11 +3639,6 @@ snapshots:
   '@emmetio/stream-reader-utils@0.1.0': {}
 
   '@emmetio/stream-reader@2.2.0': {}
-
-  '@emnapi/runtime@1.3.1':
-    dependencies:
-      tslib: 2.8.1
-    optional: true
 
   '@emnapi/runtime@1.4.5':
     dependencies:
@@ -3947,7 +3934,7 @@ snapshots:
 
   '@img/sharp-wasm32@0.33.5':
     dependencies:
-      '@emnapi/runtime': 1.3.1
+      '@emnapi/runtime': 1.4.5
     optional: true
 
   '@img/sharp-wasm32@0.34.3':
@@ -4692,7 +4679,7 @@ snapshots:
 
   astro-font@1.1.0: {}
 
-  astro@5.12.4(@types/node@24.1.0)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.46.1)(typescript@5.8.3)(yaml@2.7.0):
+  astro@5.12.5(@types/node@24.1.0)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.46.1)(typescript@5.8.3)(yaml@2.7.0):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
@@ -6554,9 +6541,6 @@ snapshots:
 
   semver@6.3.1: {}
 
-  semver@7.6.3:
-    optional: true
-
   semver@7.7.2: {}
 
   seroval-plugins@1.3.2(seroval@1.3.2):
@@ -6568,8 +6552,8 @@ snapshots:
   sharp@0.33.5:
     dependencies:
       color: 4.2.3
-      detect-libc: 2.0.3
-      semver: 7.6.3
+      detect-libc: 2.0.4
+      semver: 7.7.2
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.33.5
       '@img/sharp-darwin-x64': 0.33.5
