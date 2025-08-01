@@ -1,0 +1,72 @@
+---
+title: "2x Performance, $300k Savings: A Case Study in Rewriting a Critical Service in Rust"
+pubDate: "2025-08-01 20:14:00"
+description: "A Tale of Scale: When Your Service Hits a Wall"
+preview: "In the world of high-traffic systems, success often brings its own set of challenges."
+categories: ["rust", "go", "performance"]
+---
+
+import rustVsGo from "@/assets/rust-vs-go.png";
+import { Image } from "astro:assets";
+
+_A Tale of Scale: When Your Service Hits a Wall_
+
+In the world of high-traffic systems, success often brings its own set of challenges. During my internship at TikTok, one of our core payment services—a reliable workhorse built in Go—began showing signs of strain. As TikTok LIVE's user base grew, the CPU load on this service climbed relentlessly, and we were confronted with incessant stability alarms from services hitting CPU thresholds. We faced a classic engineering dilemma: how do you squeeze more performance out of a critical system without compromising stability or breaking the bank? This is the story of how I tackled that challenge by selectively rewriting a performance bottleneck in Rust, resulting in a 2x performance gain and nearly $300,000 in projected annual savings in cloud costs.
+
+## TL;DR
+
+- **The Problem:** A critical, high-traffic payment service written in Go was becoming CPU-bound, leading to high operational costs and scalability risks.
+- **The Action:** We identified the most CPU-intensive API endpoints and rewrote them in Rust, a language renowned for its performance and memory efficiency. We kept the rest of the service in Go.
+- **The Result:** The new Rust implementation handled **2x the traffic** of the original service with lower latency and a fraction of the CPU and memory usage. This performance boost translates to a projected **annual cost saving of nearly $300,000**.
+
+<Image src={rustVsGo} alt="Rust vs Go" />
+
+## The Context: A Victim of Its Own Success
+
+Our core payment service is the backbone of our financial operations. Originally written in Go, it served us exceptionally well for years. Golang's simplicity, concurrency model, and fast compile times make it a fantastic choice for building and iterating on the majority of our microservices.
+
+However, a few specific API endpoints within this service—responsible for fetching user balance and statistics—were exceptionally high-traffic and computationally intensive. As traffic surged, these endpoints became a significant CPU bottleneck. We were constantly scaling up our server fleet to keep up with demand, and the costs were becoming substantial. The flame graphs told a clear story: a huge portion of CPU time was being spent within these specific functions. We realized that a general optimization of the Go code would likely yield only incremental benefits. We needed a more powerful solution for this targeted problem.
+
+## The Process: A Three-Step Journey to Production
+
+Under the guidance of my mentor and colleague, our approach was methodical and cautious, broken down into three key phases: a targeted rewrite, rigorous correctness testing, and exhaustive stress testing.
+
+### 1. The Rewrite: A Surgical Strike with Rust
+
+Instead of a full-scale, high-risk rewrite of the entire service, we opted for a surgical strike. We decided to experiment with Rust, a language that offers near bare-metal performance without sacrificing memory safety. The plan was to rewrite only the handful of CPU-bound API endpoints in Rust and leave the rest of the Go service untouched. This polyglot approach, inspired by successful implementation case studies from other teams, allowed us to apply a specialized tool precisely where it was needed most.
+
+### 2. Correctness Testing: Trust, but Verify
+
+Before even thinking about performance, our top priority was correctness. A faster, cheaper service is useless if it returns the wrong data. To validate the new Rust implementation, we deployed it in a "shadow mode." For weeks, the new service received a copy of the live production traffic, running in parallel with the original Go service. We used a robust validation pipeline that meticulously compared the response from the Rust service against the response from the Go service for every single request. Only after confirming 100% data consistency did we gain the confidence to proceed.
+
+### 3. Stress Testing: Pushing to the Breaking Point
+
+With correctness verified, it was time to answer the big question: how much faster is it? We set up two identical clusters in our production environment: one running the original Go service, the other our new Rust service. Using a dataset of over 16,000 real (but anonymized) user IDs, we subjected both clusters to an identical, escalating load, starting from a baseline and ramping up until the services started to fail. We monitored QPS, latency, CPU usage, and memory usage every step of the way.
+
+## The Results: Better, Faster, Stronger
+
+The results from the stress tests were even better than we had hoped.
+
+Across the board, the Rust service demonstrated vastly superior performance. For our most critical endpoint, the legacy Go service buckled at around 85,000 QPS. The new Rust service, running on the exact same hardware, handled over 150,000 QPS with ease—a **~1.8x improvement**. For another key endpoint, the difference was even more stark: the Go service peaked at 105,000 QPS, while the Rust service topped out at 210,000 QPS—a clean **2x performance gain**. This leap from a ~1.8x to a full 2.0x improvement wasn't accidental; it was the result of deep performance analysis, meticulously studying flame graphs, implementing copy-on-write data structures, and minimizing `memcpy` operations wherever possible.
+
+Here's a simplified look at the comparison at a high load of 80,000 QPS, each service with clusters with 40 vCPU cores and 80 GB of RAM:
+
+| Metric           | Legacy Go Service | New Rust Service | Improvement     |
+| :--------------- | :---------------- | :--------------- | :-------------- |
+| **CPU Usage**    | 78.3%             | 52.0%            | **33.6% lower** |
+| **Memory Usage** | 7.4%              | 2.07%            | **72% lower**   |
+| **p99 Latency**  | 19.87 ms          | 4.79 ms          | **76% lower**   |
+
+The performance uplift directly translates into massive cost savings. By handling double the traffic per machine, we could drastically reduce the number of required compute cores. Our final analysis showed a reduction of over 400 vCPU cores, leading to a projected **annual infrastructure cost saving of over $300,000**.
+
+## Learnings and Takeaways
+
+This project reinforced a critical engineering principle: **use the right tool for the right job.** This isn't a story about "Rust is better than Go." It's a story about engineering maturity and strategic optimization.
+
+Paradoxically, this project gave me an even deeper appreciation for **Golang**. Go's incredible developer productivity and well-rounded performance make it the ideal choice for 95% of our services. It allows us to build, ship, and maintain features at a rapid pace. Our success with Go is what allowed us to have a service so popular that it needed this level of optimization in the first place.
+
+Our key takeaway is that true engineering excellence lies in knowing your tools and their trade-offs. Go remains our default language for general-purpose microservices. But for those rare, hyper-critical, CPU-bound bottlenecks, we now have a proven playbook for surgically applying a tool like Rust to achieve incredible performance and efficiency gains.
+
+## Conclusion
+
+By identifying a critical performance bottleneck and applying a targeted, well-tested solution, we were able to double the capacity of a core service, significantly improve its latency, and cut our operational costs dramatically. While this project was largely an individual endeavor, it would not have been successful without the invaluable guidance from my mentor and the support of my colleagues. This journey was a powerful reminder that sometimes, the biggest wins come not from rewriting everything, but from making smart, strategic changes exactly where they matter most.
