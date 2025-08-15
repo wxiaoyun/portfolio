@@ -1,0 +1,173 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{black}
+\nopagenumbers{}
+\usepackage[utf8]{inputenc}
+\usepackage{ragged2e}
+\usepackage[scale=0.915]{geometry}
+\usepackage{import}
+\usepackage{multicol}
+\usepackage{import}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\name{Wu}{Xiaoyun}
+\newcommand*{\customcventry}[7][.13em]{
+\begin{tabular}{@{}l}
+{\bfseries #4} \
+{\itshape #3}
+\end{tabular}
+\hfill
+\begin{tabular}{l@{}}
+{\bfseries #5} \
+{\itshape #2}
+\end{tabular}
+\ifx&#7&%
+\else{\
+\begin{minipage}{\maincolumnwidth}%
+\small#7%
+\end{minipage}}\fi%
+\par\addvspace{#1}}
+\begin{document}
+\makecvtitle
+\vspace*{-16mm}
+% \begin{center}\textbf{ Digital Marketer and Business Analyser}\end{center}
+\begin{center}
+\begin{tabular}{ c c c }
+\faHome\enspace Singapore &
+\faMobile\enspace +65 98116843 &
+\enspace {$\mathbb{E}$}\enspace me@wxiaoyun.com \\
+\enspace {$\mathbb{W}$}\enspace 
+\color{blue} \href{https://wxiaoyun.com/}{wxiaoyun.com} &
+\faLinkedin\enspace \color{blue} \href{https://www.linkedin.com/in/w-xiaoyun/}{in/w-xiaoyun} &
+\faGithub\enspace \color{blue} \href{https://github.com/wxiaoyun}{github.com/wxiaoyun} \\
+% \multicolumn{3}{c}{Open for internship from 12 May to 3 Aug 2025}
+\end{tabular}
+\end{center}
+
+\section{Professional Experience}
+
+% \customcventry{12/2024 ‐ Present}{{\color{blue}\href{https://www.linkedin.com/company/tiktok/mycompany/}{Tiktok}}}{Backend Software Engineer Intern | Wallet Service}{Singapore}{}{
+% {\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+% \item Enhanced Quality of both Wallet Service and Money Platform by developing a fullstack Reasoning platform 
+% \end{itemize}}}
+
+\customcventry{12/2024 ‐ 08/2025}{{\color{blue}\href{https://www.linkedin.com/company/bytedance/}{TikTok}}}{Backend Software Engineer Intern - Global LIVE Wallet}{Singapore}{}{
+{\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+\item Enhanced on-call efficiency for Wallet services by developing AI-driven analyzers and auto-conclusion features in the Oncall Agent; utilized {\color{blue}\href{https://go.dev/}{Golang}}, LLMs, and vector databases to rank relevant events, correlate error logs with code locations, and suggest root causes, significantly reducing engineers' on-call burden and improving overall development efficiency.
+\item Optimized core RPC services by rewriting high-QPS handlers (4.4 million peak QPS) from Golang to {\color{blue}\href{https://www.rust-lang.org/}{Rust}}, achieving 50\% compute resource savings and 30\% latency reduction; conducted thorough staging/production testing and traffic diversion, projecting \$300K in annual server cost savings and freeing resources for critical adjacent projects.
+\end{itemize}}}
+
+\customcventry{05/2024 ‐ 08/2024}{{\color{blue}\href{https://www.linkedin.com/company/tiktok/mycompany/}{TikTok}}}{Frontend Software Engineer Intern - Global LIVE Money Platform}{Singapore}{}{
+{\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+\item Boosted developer productivity by doubling asset bundling speed (JS, HTML, CSS) and cutting CI pipeline and production deployment times from 15 to 10 minutes for the Money Platform, achieved through migration from {\color{blue}\href{https://webpack.js.org/}{Webpack}} to {\color{blue}\href{https://rspack.dev/}{Rspack}}. Led cross-functional collaboration with {\color{blue}\href{https://rspack.dev/}{Rspack}}, {\color{blue}\href{https://rsbuild.dev/}{Rsbuild}}, and TikTok LIVE Solutions teams.
+\item Improved Money Platform quality by creating a white-screen test summary page and upgrading the white-screen alarm Lark bot, enhancing debugging with detailed reports including console logs and network requests viewable in Chrome DevTools—eliminating local bug reproduction and accelerating alarm resolution.
+\item Developed an alarm Lark bot to streamline workflows by aggregating, filtering, and analysing alarms; designed a standardised API for seamless third-party integration and incorporated white-screen alarms into this framework.
+\end{itemize}}}
+
+\customcventry{05/2023 ‐ 08/2023}{{\color{blue}\href{https://www.comp.nus.edu.sg/~vwo/projects/2023-cms.html}{Computing for Voluntary Welfare Organisations}}}{Software Engineer}{Singapore}{}{
+{\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+\item Reduced backend response time by 5 times by porting a Case Management System backend from Ruby on Rails to Golang. Notable features ported include RBAC, Auth, 2FA and Masquerading.
+\end{itemize}}}
+
+% \customcventry{06/2023 ‐ present}{{\color{blue}\href{https://google.com/}{(Stellar Systems)}}}{Digital Marketing Strategist,}{Las Vegas, NV}{}{
+% {\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+% \item Developed strategic plans for campaigns across email, social media, SEO/SEM, and display advertising techniques.
+% \item Developed and implemented digital marketing strategies that generated over \$850,000 in revenue in 2023
+% \item Oversee the execution of SEO, SEM, email, social media, and display advertising campaigns, achieving a 12\% decrease in cost per acquisition
+% \end{itemize}}}
+
+% \customcventry{01/2023 ‐ 05/2023}{{\color{blue}\href{https://www.google.com/}{(Synapse Solutions)}}}{Digital Account Manager,}{Las Vegas, NV}{}{
+% {\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+% \item Implemented promotional activities such as re-targeting campaigns for e-commerce businesses.
+% \item Monitored the performance of PPC campaigns through Google Adwords. 
+% \item Managed and optimized PPC campaigns, resulting in a 5\% increase in click-through rates
+% \end{itemize}}}
+
+% \customcventry{03/2023 ‐ 12/2023}{{\color{blue}\href{https://www.google.com/}{(CeeCee Marketing)}}}{Marketing Coordinator,}{New YOrk, NY}{}{
+% {\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+% \item Identified and executed improvements for processes, content, and lead generation.
+% \item Collaborated with Content Team to promote blog posts and guest posts.
+% \item Implemented new competitive analysis and consumer trend reports to increase quarterly sales by 15%.
+% \end{itemize}}}
+
+% \customcventry{01/2022 ‐ 07/2022}{{\color{blue}\href{https://www.google.com/}{(Some Icon, LLC)}}}{Executive Assistant,}{New York, NY}{}{
+% {\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+% \item Identified new autoposting solution to cut social media time spent by 35%.
+% \item Prepared written text proposals and speech writing drafts.
+% \item Managed all public social media profiles of important public figure.
+% \end{itemize}}}
+
+% \customcventry{06/2021 ‐ 12/2021}{{\color{blue}\href{https://www.google.com/}{(Main Company)}}}{Digital marketer,}{New York, NY}{}{
+% {\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+% \item Reached 120\% of customer acquisition target, capturing 7,500 new subscribers in six months following development and launch of a niche-marketing campaign.
+% \item Facilitated a medical-billing company's domination of the Northeast market with successful PR initiatives.
+% \end{itemize}}}
+
+% \customcventry{01/2021 ‐ 06/2021}{{\color{blue}\href{https://www.google.com/}{(Something Company)}}}{Digital Marketing Specialist,}{Seattle , USA}{}{
+% {\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+% \item Developed and led processes to expand retail opportunities, and facilitated client on-boarding.
+% \item Brought forth a strong understanding of SEO best practices, and developed and implemented SEO strategies.
+% \item Managed the marketing database and data management initiatives.
+% \end{itemize}}}
+
+% \customcventry{01/2019 ‐ 01/2021}{{\color{blue}\href{https://www.google.com/}{(ABC Marketing Agency)}}}{Digital Marketing Specialist,}{Seattle , USA}{}{
+% {\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+% \item Defined, developed, and implemented marketing strategies to automate and measure target audience movement.
+% \item Led 3 premium projects with a team of 3 members
+% \item Increased client website impressions by 0-20K through SEO strategies in 12 months and boosted organic traffic by 10\%
+% \item Established processes and protocols for campaign measurement to optimize results.
+% \end{itemize}}}
+
+% \customcventry{01/2018 ‐ 12/2018}{{{Freelancer}}}{Digital Marketing Intern,}{Seattle , USA}{}{
+% {\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+% \item Managed and optimized PPC campaigns, resulting in a 5\% increase in click-through rates
+% \item Achieved a 23\% increase in conversion rates by conducting A/B testing and analyzing data to improve website performance.
+% \end{itemize}}}
+
+% \section{Online Courses \& Certifications}
+% {\begin{itemize}[label=\textbullet]
+%       \item Introduction to Digital Marketing (Jan. 2023) - \underline{\color{blue}\href{https://google.com/}{SEMRUSH}}
+%       \item Career Essentials in Digital Marketing by LinkedIn (Aug. 2022) - \underline{\color{blue}\href{https://google.com/}{LinkedIn}}
+%       \item Visualization with Tableau (Feb. 2022) - \underline{\color{blue}\href{https://google.com/}{Coursera}}
+%       \item Foundations of Google Analytics  (Jun. 2021) - \underline{\color{blue}\href{https://google.com/}{Google, Coursera}}
+%      \item Google Analytics for Power Users (Jun. 2021) - \underline{\color{blue}\href{https://google.com/}{Google}}
+%        \item The Fundamentals of Digital Marketing, (Jul. 2019) - \underline{\color{blue}\href{https://google.com/}{Google}} 
+%   \end{itemize}} 
+
+\section{Projects}
+\customcventry{}{}{{\color{blue}\href{https://github.com/wxiaoyun/expense-tracker}{Expense Tracker}}}{}{}{
+{\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+\item Developed a cross-platform personal finance management application using Tauri, SolidJS, and SQLite. Implemented comprehensive transaction tracking with recurring payment automation, interactive financial analytics, and data visualization. Built with offline-first architecture featuring local SQLite storage, automated backups, and CSV import/export capabilities. Integrated clipboard-based automation for streamlined transaction entry. Leveraged modern web technologies while maintaining native performance through Rust-powered backend, resulting in a responsive and efficient mobile application.
+\end{itemize}}}
+
+\customcventry{}{}{{\color{blue}\href{https://github.com/crabscript/rustscript}{RustScript}}}{}{}{
+{\begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+\item Developed a statically typed, compiled programming language combining Rust's syntax with the simplicity of TypeScript and Go with core features including primitive data types, higher-order functions, type checking, and concurrency support. The language to compile code into bytecode, akin to Java, followed by execution on a virtual machine.
+\end{itemize}}}
+
+\section{Education}
+\customcventry{2022 - 2026}{\color{blue}\href{https://www.comp.nus.edu.sg/}{National University of Singapore}}{BSc Computer Science, second major in Statistics}{Singapore}{}{}{Focus areas: Programming Language and Parallel Computing}
+
+\section{CCA}
+\customcventry{09/2023 - 08/2024}{\color{blue}\href{https://www.comp.nus.edu.sg/~vwo/}{Computing for Voluntary Welfare Organisations}}{President}{}{}{}{Oversee the recruitment and application process for CVWO's 2024 Summer Internship program. Manage marketing, outreach, and operations for CVWO.}
+
+\customcventry{12/2023 - 04/2024}{\color{blue}\href{https://nusc.club/}{NUS Students' NUS College Club}}{Backend Tech Lead}{}{}{}{Designed and implemented Role Based Access Control for the for backend of the NUSC Club website}
+
+
+\section{Skills}
+\begin{multicols}{2}
+    \begin{itemize}[label=\textbullet]
+    \item {\textbf{Programming Languages:} Typescript, Rust, Go, Python, Java}
+    \item {\textbf{Technologies:} Reactjs, Solidjs, PostgreSQL, Redis}
+    \end{itemize}
+\end{multicols}
+
+% \section{Languages}
+% \begin{multicols}{2}
+%     \begin{itemize}[label=\textbullet]
+%     \item \textbf{English} [Native]
+%     \item {\textbf{Chinese} [Native]}
+%     \end{itemize}
+% \end{multicols}
+\end{document}

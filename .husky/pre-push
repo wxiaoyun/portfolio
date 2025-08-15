@@ -1,1 +1,1 @@
-pnpm run build
+pnpm run astro check && pnpm run build
