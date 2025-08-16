@@ -1,6 +1,6 @@
 import { z } from "astro:content";
 
-export const MediumItemSchema = z.object({
+export const BlogItemSchema = z.object({
   title: z.string(),
   pubDate: z.coerce.date(),
   link: z.string().optional(),
@@ -10,4 +10,4 @@ export const MediumItemSchema = z.object({
   categories: z.array(z.string()),
 });
 
-export type MediumItem = z.infer<typeof MediumItemSchema>;
+export type BlogItem = z.infer<typeof BlogItemSchema>;
