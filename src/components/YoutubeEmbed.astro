@@ -1,0 +1,26 @@
+---
+const {
+  videoId = "dQw4w9WgXcQ",
+  title = "YouTube video player",
+  isShort = false,
+} = Astro.props;
+const src = `https://www.youtube.com/embed/${videoId}`;
+---
+
+<!-- Credits to Pursuit of Loot's blog post:
+https://pursuitofloot.gg/blog/youtube-embeds-in-astro/ -->
+<iframe
+  width={isShort ? 664 : 560}
+  height={isShort ? 1181 : 315}
+  src={src}
+  title={title}
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+  class:list={[
+    { "aspect-video": !isShort },
+    { "aspect-9/16": isShort },
+    "h-auto",
+    "w-full",
+    "border-0",
+  ]}></iframe>

@@ -7,11 +7,14 @@ categories: ["rust", "go", "performance"]
 ---
 
 import rustVsGo from "@/assets/rust-vs-go.png";
+import YoutubeEmbed from "@/components/YoutubeEmbed.astro";
 import { Image } from "astro:assets";
 
 _A Tale of Scale: When Your Service Hits a Wall_
 
 In the world of high-traffic systems, success often brings its own set of challenges. During my internship at TikTok, one of our core payment services—a reliable workhorse built in Go—began showing signs of strain. As TikTok LIVE's user base grew, the CPU load on this service climbed relentlessly, and we were confronted with incessant stability alarms from services hitting CPU thresholds. We faced a classic engineering dilemma: how do you squeeze more performance out of a critical system without compromising stability or breaking the bank? This is the story of how I tackled that challenge by selectively rewriting a performance bottleneck in Rust, resulting in a 2x performance gain and nearly $300,000 in projected annual savings in cloud costs.
+
+<Image src={rustVsGo} alt="Rust vs Go" />
 
 ## TL;DR
 
@@ -19,7 +22,9 @@ In the world of high-traffic systems, success often brings its own set of challe
 - **The Action:** We identified the most CPU-intensive API endpoints and rewrote them in Rust, a language renowned for its performance and memory efficiency. We kept the rest of the service in Go.
 - **The Result:** The new Rust implementation handled **2x the traffic** of the original service with lower latency and a fraction of the CPU and memory usage. This performance boost translates to a projected **annual cost saving of nearly $300,000**.
 
-<Image src={rustVsGo} alt="Rust vs Go" />
+*You can also watch my talk on this project at NUS Hackers:*
+
+<YoutubeEmbed videoId="sELryGUfzMg" title="Rust Rewrite Case Study" />
 
 ## The Context: A Victim of Its Own Success
 
