@@ -12,7 +12,7 @@ import { Image } from "astro:assets";
 
 _A Tale of Scale: When Your Service Hits a Wall_
 
-In the world of high-traffic systems, success often brings its own set of challenges. During my internship at TikTok, one of our core payment services—a reliable workhorse built in Go—began showing signs of strain. As TikTok LIVE's user base grew, the CPU load on this service climbed relentlessly, and we were confronted with incessant stability alarms from services hitting CPU thresholds. We faced a classic engineering dilemma: how do you squeeze more performance out of a critical system without compromising stability or breaking the bank? This is the story of how I tackled that challenge by selectively rewriting a performance bottleneck in Rust, resulting in a 2x performance gain and nearly $300,000 in projected annual savings in cloud costs.
+In the world of high-traffic systems, success often brings its own set of challenges. During my internship at TikTok, one of our core payment services—a reliable workhorse built in Go—began showing signs of strain. As TikTok LIVE's user base grew, the CPU load on this service climbed relentlessly, and we were confronted with incessant stability alarms from services hitting CPU thresholds. We faced a classic engineering dilemma: how do you squeeze more performance out of a critical system without compromising stability or breaking the bank? This is the story of how I tackled that challenge by selectively rewriting a performance bottleneck in Rust, resulting in a 2x performance gain[^1] and nearly $300,000[^2][^3] in projected annual savings in cloud costs.
 
 <Image src={rustVsGo} alt="Rust vs Go" />
 
@@ -20,9 +20,9 @@ In the world of high-traffic systems, success often brings its own set of challe
 
 - **The Problem:** A critical, high-traffic payment service written in Go was becoming CPU-bound, leading to high operational costs and scalability risks.
 - **The Action:** We identified the most CPU-intensive API endpoints and rewrote them in Rust, a language renowned for its performance and memory efficiency. We kept the rest of the service in Go.
-- **The Result:** The new Rust implementation handled **2x the traffic** of the original service with lower latency and a fraction of the CPU and memory usage. This performance boost translates to a projected **annual cost saving of nearly $300,000**.
+- **The Result:** The new Rust implementation handled **2x the traffic** of the original service with lower latency and a fraction of the CPU and memory usage. This performance boost translates to a projected **annual cost saving of nearly $300,000**[^2].
 
-*You can also watch my talk on this project at NUS Hackers:*
+_You can also watch my talk on this project at NUS Hackers:_
 
 <YoutubeEmbed videoId="sELryGUfzMg" title="Rust Rewrite Case Study" />
 
@@ -75,3 +75,7 @@ Our key takeaway is that true engineering excellence lies in knowing your tools 
 ## Conclusion
 
 By identifying a critical performance bottleneck and applying a targeted, well-tested solution, we were able to double the capacity of a core service, significantly improve its latency, and cut our operational costs dramatically. While this project was largely an individual endeavor, it would not have been successful without the invaluable guidance from my mentor and the support of my colleagues. This journey was a powerful reminder that sometimes, the biggest wins come not from rewriting everything, but from making smart, strategic changes exactly where they matter most.
+
+[^1]: Here, performance is measured in terms of QPS per vCPU core. Since the Rust service is able to handle 2x the throughput of the original Go service, the improvement is 2x.
+[^2]: The cost savings are calculated using the following formula: `(old_vCPU_cores - new_vCPU_cores) * (vCPU_price_per_day * 365)`. The vCPU price is taken from ByteDance internal compute platform. Note that is a **projection** based on the current cost of our server fleet and the expected improvement in performance.
+[^3]: Many readers have rightfully pointed out that the savings seems to be too small given TikTok's scale. I would like to clarify that $300,000 savings come from **partial** rewrite of **a single microservice** of TikTok LIVE's payment platform. 99% of services in the payment platform are still written in Go.
