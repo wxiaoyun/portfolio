@@ -172,7 +172,7 @@ export const professionalExperiences: BentoGridItemProps[] = [
         </li>
         <li>
           {
-            "Optimized core RPC services by rewriting high-QPS handlers from Golang to Rust, achieving 50% resource savings and 30% latency reduction, projected to save $500K annually."
+            "Optimized core RPC services by rewriting high-QPS handlers from Golang to Rust, achieving 50% resource savings and 30% latency reduction, projected to save $300K annually."
           }
         </li>
       </ul>
