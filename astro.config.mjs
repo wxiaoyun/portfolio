@@ -10,7 +10,7 @@ import remarkToc from "remark-toc";
 
 export default defineConfig({
   prefetch: {
-    defaultStrategy: 'viewport'
+    defaultStrategy: "viewport",
   },
   output: "static",
   site: "https://wxiaoyun.com/",
