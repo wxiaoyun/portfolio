@@ -18,7 +18,11 @@ const pubDate = new Date(item.pubDate).toLocaleDateString("en-US", {
 
 <article class="flex flex-col">
   <div class="flex justify-between">
-    <a href={`/blog/${entry.id}`} aria-label={item.description}>
+    <a
+      href={`/blog/${entry.id}`}
+      aria-label={item.description}
+      data-astro-prefetch
+    >
       <h4
         class="scroll-m-20 text-md font-semibold tracking-tight hover:underline"
         transition:name={`blog-${entry.id}-${isTop ? "top" : "other"}`}

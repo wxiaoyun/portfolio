@@ -9,7 +9,9 @@ import remarkGfm from "remark-gfm";
 import remarkToc from "remark-toc";
 
 export default defineConfig({
-  prefetch: true,
+  prefetch: {
+    defaultStrategy: 'viewport'
+  },
   output: "static",
   site: "https://wxiaoyun.com/",
   image: {
