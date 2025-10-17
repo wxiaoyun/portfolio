@@ -22,8 +22,8 @@ npm install -g pnpm
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/wxiaoyun/wxiaoyun.github.io.git
-cd wxiaoyun.github.io
+git clone https://github.com/wxiaoyun/portfolio.git
+cd portfolio
 ```
 
 ### Install Packages
@@ -53,7 +53,5 @@ This will start the development server, and you can access the application at
 
 - [Astro](https://astro.build/) - The web framework used
 - [SolidJS](https://www.solidjs.com/) - The UI framework used
-- [TypeScript](https://www.typescriptlang.org/) - For adding static types to
-  JavaScript
 - [Tailwind](https://tailwindcss.com/) - A utility-first CSS framework
 - [Shadcn UI](https://shadcn-solid.com/) - A collection of UI components
