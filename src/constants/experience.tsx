@@ -1,8 +1,4 @@
-import {
-  BentoSkeleton,
-  BentoSkeletonWide,
-  type BentoGridItemProps,
-} from "@/components/BentoGrid";
+import { BentoSkeleton, type BentoGridItemProps } from "@/components/BentoGrid";
 import { getImage } from "astro:assets";
 import { BsPersonBadgeFill } from "solid-icons/bs";
 import {
@@ -14,9 +10,9 @@ import { FiExternalLink } from "solid-icons/fi";
 import { ImLibrary } from "solid-icons/im";
 import rustScript from "../assets/RustScript.png";
 import cvwo from "../assets/cvwo.svg";
+import nusMods from "../assets/nusmods.png";
 import rspack from "../assets/rspack.svg";
 
-// Optimise images at build time
 const rustScriptPng = await getImage({
   src: rustScript,
   format: "webp",
@@ -26,6 +22,9 @@ const cvwoSvg = await getImage({
 });
 const rspackSvg = await getImage({
   src: rspack,
+});
+const nusModsPng = await getImage({
+  src: nusMods,
 });
 
 export const projects: BentoGridItemProps[] = [
@@ -119,6 +118,31 @@ export const openSourceContrib: BentoGridItemProps[] = [
   {
     header: (
       <img
+        src={nusModsPng.src}
+        alt="NUSMods logo"
+        width={96}
+        height={96}
+        class="m-auto group-hover/bento:rotate-3 transition-all rounded-md"
+      />
+    ),
+    title: "NUSMods Raycast Extension",
+    icon: (
+      <a
+        href="https://www.raycast.com/wxiaoyun/nusmods"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="NUSMods Raycast Extension"
+      >
+        <FiExternalLink class="hover:opacity-65 transition-opacity" />
+      </a>
+    ),
+    description:
+      "Developed a Raycast extension for NUSMods, enabling NUS students to quickly access their class schedules and module information directly from the Raycast interface.",
+    class: "bg-neutral-50 sm:col-span-2",
+  },
+  {
+    header: (
+      <img
         src={rspackSvg.src}
         alt="Rspack logo"
         width={96}
@@ -141,7 +165,6 @@ export const openSourceContrib: BentoGridItemProps[] = [
       "Made contribution to Webpack alignments and Javascript to Typescript migrations.",
     class: "bg-neutral-50",
   },
-  BentoSkeletonWide,
 ];
 
 export const professionalExperiences: BentoGridItemProps[] = [
@@ -224,7 +247,7 @@ export const professionalExperiences: BentoGridItemProps[] = [
   {
     header: (
       <img
-        class="group-hover/bento:scale-105 transition-transform h-[96px]"
+        class="group-hover/bento:scale-105 transition-transform h-24"
         src={cvwoSvg.src}
         alt="CVWO Logo"
       />
