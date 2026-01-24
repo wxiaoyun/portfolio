@@ -1,6 +1,5 @@
 ---
 import Footer from "@/components/Footer.astro";
-import GoogleAnalytics from "@/components/GoogleAnalytics.astro";
 import Header from "@/components/Header.astro";
 import { Separator } from "@/components/ui/separator";
 import "@/index.css";
@@ -38,7 +37,6 @@ const { title = "Wu Xiaoyun" } = Astro.props as LayoutProps;
       ]}
     />
     <ClientRouter />
-    <GoogleAnalytics />
   </head>
   <body class="antialiased bg-gray-50">
     <div
