@@ -9,7 +9,7 @@ import {
 import {
   SiArchlinux,
   SiAstro,
-  SiCss3,
+  SiCss,
   SiHtml5,
   SiJavascript,
   SiNextdotjs,
@@ -40,7 +40,7 @@ const SkillsFCs: IconTypes[] = [
   SiJavascript,
   FaBrandsPython,
   SiHtml5,
-  SiCss3,
+  SiCss,
   FaBrandsDocker,
   SiReact,
   SiSolid,
