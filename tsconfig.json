@@ -3,7 +3,6 @@
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
     "allowJs": true,
-    "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
