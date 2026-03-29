@@ -17,7 +17,7 @@ export const Separator = <T extends ValidComponent = "hr">(
   return (
     <SeparatorPrimitive
       class={cn(
-        "shrink-0 bg-border data-[orientation=horizontal]:h-[1px] data-[orientation=vertical]:h-full data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-[1px]",
+        "shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=vertical]:h-full data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-px",
         local.class,
       )}
       {...rest}

@@ -1,43 +1,61 @@
 ---
 import { BentoGrid, BentoGridItem } from "@/components/BentoGrid";
-import { SkillGrid } from "@/components/SkillCarousel";
 import { Separator } from "@/components/ui/separator";
-import { interests } from "@/constants/interest";
-import { SkillsIcons } from "@/constants/skills";
-import Layout from "../layouts/Layout.astro";
+import {
+  openSourceContrib,
+  professionalExperiences,
+  projects,
+} from "@/constants/experience";
+import Layout from "@/layouts/Layout.astro";
 
-const selfIntro =
-  "Hi there, I am Wu Xiaoyun.\n I enjoy writing Rust 🦀, Go and Typescript. I am interested in Programming Languages and Parallel Computing.";
+const selfIntro = `I am a developer living in Singapore.
+Just a casual enjoyer of Rust 🦀, Go and Typescript. Some of my interest include exploring programming languages and learning more about parallel computing.`;
+
+const interests =
+  "I am enjoy running and I always preparing for my next marathon.";
 ---
 
-<Layout title="Wu Xiaoyun - Home">
+<Layout title="Wu Xiaoyun - About Me">
   <section>
-    <h3 class="scroll-m-20 text-2xl font-semibold tracking-tight">About me</h3>
-    <p class="scroll-m-20 text-lg font-semibold tracking-tight">
+    <h3 class="scroll-m-20 text-2xl font-semibold tracking-tight">
+      Wu Xiaoyun
+    </h3>
+    <p class="scroll-m-20 text-md tracking-tight pb-2">
       {selfIntro}
     </p>
+    <p class="scroll-m-20 text-md tracking-tight">
+      {interests}
+    </p>
   </section>
+
   <Separator />
-  <section class="w-full">
-    <h3 class="scroll-m-20 text-2xl font-semibold tracking-tight">
-      Tools and Technologies
-    </h3>
-    <SkillGrid
-      client:load
-      skills={SkillsIcons}
-      rowSize={6}
-      rowsDelay={150}
-      class="mt-6 flex flex-col gap-6"
-    />
-  </section>
-  <Separator />
+
   <section>
     <h3 class="scroll-m-20 text-2xl font-semibold tracking-tight">
-      My Interests
+      Professional Experience
     </h3>
-
     <BentoGrid class="mt-6">
-      {interests.map((int) => <BentoGridItem {...int} />)}
+      {professionalExperiences.map((props) => <BentoGridItem {...props} />)}
+    </BentoGrid>
+  </section>
+
+  <Separator />
+
+  <section>
+    <h3 class="scroll-m-20 text-2xl font-semibold tracking-tight">
+      Open Source Contributions
+    </h3>
+    <BentoGrid class="mt-6">
+      {openSourceContrib.map((props) => <BentoGridItem {...props} />)}
+    </BentoGrid>
+  </section>
+
+  <Separator />
+
+  <section>
+    <h3 class="scroll-m-20 text-2xl font-semibold tracking-tight">Projects</h3>
+    <BentoGrid class="mt-6">
+      {projects.map((props) => <BentoGridItem {...props} />)}
     </BentoGrid>
   </section>
 </Layout>
