@@ -1,4 +1,4 @@
-import { z } from 'astro/zod';
+import { z } from "astro/zod";
 
 export const BlogItemSchema = z.object({
   title: z.string(),
