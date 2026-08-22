@@ -19,7 +19,6 @@ export default defineConfig({
     domains: ["miro.medium.com"],
   },
   markdown: {
-    gfm: true,
     shikiConfig: {
       theme: "tokyo-night",
     },

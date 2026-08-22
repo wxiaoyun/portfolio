@@ -49,7 +49,7 @@
     "remark-gfm": "^4.0.1",
     "solid-devtools": "^0.34.5",
     "tailwindcss": "4.2.2",
-    "typescript": "6.0.2",
+    "typescript": "6.0.3",
     "typescript-eslint": "8.57.2"
   }
 }
