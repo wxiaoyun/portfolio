@@ -1,4 +1,5 @@
 // @ts-check
+import { unified } from "@astrojs/markdown-remark";
 import mdx from "@astrojs/mdx";
 import solidJs from "@astrojs/solid-js";
 import tailwindcss from "@tailwindcss/vite";
@@ -22,8 +23,10 @@ export default defineConfig({
     shikiConfig: {
       theme: "tokyo-night",
     },
-    remarkPlugins: [remarkToc, remarkGfm],
-    rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+    processor: unified({
+      remarkPlugins: [remarkGfm, remarkToc],
+      rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+    }),
   },
   integrations: [solidJs({ devtools: true }), mdx()],
   vite: {

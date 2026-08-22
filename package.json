@@ -15,10 +15,11 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@astrojs/mdx": "^5.0.3",
-    "@astrojs/solid-js": "^6.0.1",
+    "@astrojs/markdown-remark": "^7.2.4",
+    "@astrojs/mdx": "^7.0.7",
+    "@astrojs/solid-js": "^7.0.2",
     "@kobalte/core": "^0.13.8",
-    "astro": "^5.18.1",
+    "astro": "^7.2.4",
     "astro-font": "^1.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -32,7 +33,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.8",
+    "@astrojs/check": "0.9.10",
     "@eslint/js": "^9.39.4",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "4.2.2",
@@ -50,6 +51,5 @@
     "tailwindcss": "4.2.2",
     "typescript": "6.0.2",
     "typescript-eslint": "8.57.2"
-  },
-  "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319"
+  }
 }
